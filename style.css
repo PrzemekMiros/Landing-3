@@ -6,7 +6,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Barlow", sans-serif;
-    background-color: #111;
+    line-height: 1.4;
+    background: rgb(10,10,10);
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(17,17,17,1) 100%); 
     color: #fff
 }
 
@@ -19,31 +21,61 @@ body {
 .grid-2 {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-gap: 100px
+    grid-gap: 80px
 }
 
 h1 {
     margin-top: 0;
-    font-size: 28px
+    font-size: 30px;
 }
-
+b {
+    font-weight: 600;
+    letter-spacing: .7px;
+}
 .green {
     color: #0bff22
 }
 
 .container {
     height: 100vh;
-    max-width: 800px;
+    max-width: 760px;
     margin-left: auto;
     margin-right: auto;
     align-items: center;
     justify-content: center
 }
 
+.step-wrap {
+    position: relative;
+}
+
+.step-wrap::after,
+.step-wrap::before {
+    content: "";
+    position: absolute;
+    background: #0bff22;
+    overflow: hidden;
+    z-index: -1
+}
+
+.step-wrap::after {
+    top: 10px;
+    left: -40px;
+    bottom: 0;
+    width: 8px;
+}
+
+.step-wrap::before {
+    left: -40px;
+    bottom: 0;
+    width: 50%;
+    height: 8px;
+}
+
 .form-wrap {
     position: relative;
     padding: 50px;
-    border-radius: 21px;
+    border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 30px 0 rgb(0, 0, 0);
     z-index: 1
@@ -75,6 +107,8 @@ button,
     margin-bottom: 18px;
     width: 100%;
     background: #eee;
+    color: #111;
     text-align: center;
-    border: none
+    border: none;
+    font-size: 19px;
 }
