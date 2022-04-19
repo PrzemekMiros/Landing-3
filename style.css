@@ -2,20 +2,22 @@
     box-sizing: border-box
 }
 
+:root {
+    --color-accent: #0bff22
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Barlow", sans-serif;
     line-height: 1.4;
-    background: rgb(10,10,10);
-    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(17,17,17,1) 100%); 
-    color: #fff
+    color: #fff;
+    background: #111;
 }
 
 .bg-image {
     background-size: cover;
     background-position: center;
-    background-blend-mode: multiply
 }
 
 .grid-2 {
@@ -77,6 +79,7 @@ b {
     padding: 50px;
     border-radius: 8px;
     overflow: hidden;
+    background: #1115;
     box-shadow: 0 0 30px 0 rgb(0, 0, 0);
     z-index: 1
 }
@@ -99,9 +102,7 @@ img {
     height: auto
 }
 
-input,
-button,
-.nobutton {
+.form-field {
     display: inline-block;
     padding: 13px;
     margin-bottom: 18px;
@@ -111,4 +112,20 @@ button,
     text-align: center;
     border: none;
     font-size: 19px;
+}
+
+.form-field:first-child {
+    background: #1a1a1a;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+.button {
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+.button:hover {
+    background: var(--color-accent);
+    color: #222;
 }
