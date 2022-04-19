@@ -47,12 +47,13 @@ main::before {
 
 h1 {
     margin-top: 0;
-    font-size: 44px;
+    font-size: 30px;
     text-align: center;
 }
 
-h1 span {
-    color: var(--color-accent);
+h1 svg {
+    width: 130px;
+    margin-bottom: -2px;
 }
 
 p {
@@ -64,7 +65,7 @@ p {
 
 .form-wrap {
     position: relative;
-    padding: 70px 50px 80px;
+    padding: 70px 50px 20px;
     max-width: 660px;
     margin: 0 auto;
     overflow: hidden;
@@ -84,7 +85,8 @@ p {
     z-index: -1
 }
 
-.description {
+.description,
+.coupon-wrap {
     position: relative;
     margin-bottom: 60px;
 }
@@ -95,7 +97,7 @@ p {
     padding-bottom: 13px;
 }
 
-.number{
+.number {
     width: 68px;
     height: 50px;
     display: flex;
@@ -158,17 +160,27 @@ p {
 }
 
 @media(min-width:767px) {
+    h1 {
+        font-size: 44px;
+    }
+
+    h1 svg {
+        width: 180px;
+        margin-bottom: -2px;
+    }
+
     .form-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 50px;
-    }  
-.description::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    right: -25px;
-    border-right: 1px solid #fff;
-}
+    }
+
+    .description::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        bottom: 0;
+        right: -25px;
+        border-right: 1px solid #fff;
+    }
 }
