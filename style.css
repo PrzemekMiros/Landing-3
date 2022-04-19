@@ -18,6 +18,8 @@ main {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 60px;
     background-image: url("1.webp");
     background-position: 100% 24%;
     background-size: cover;
@@ -62,7 +64,7 @@ p {
 
 .form-wrap {
     position: relative;
-    padding: 80px 50px 70px;
+    padding: 70px 50px 80px;
     max-width: 660px;
     margin: 0 auto;
     overflow: hidden;
@@ -84,15 +86,7 @@ p {
 
 .description {
     position: relative;
-}
-
-.description::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    bottom: 0;
-    right: -25px;
-    border-right: 1px solid #fff;
+    margin-bottom: 60px;
 }
 
 .field-wrap {
@@ -141,6 +135,7 @@ p {
 
 .button {
     cursor: pointer;
+    transition: .2s ease-in-out;
 }
 
 .button:hover {
@@ -156,10 +151,24 @@ p {
     padding-bottom: 0;
 }
 
+@media(max-width:767px) {
+    .mob-none {
+        display: none;
+    }
+}
+
 @media(min-width:767px) {
     .form-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 50px;
-    }
+    }  
+.description::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: -25px;
+    border-right: 1px solid #fff;
+}
 }
